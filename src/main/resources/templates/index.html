@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>点餐通</title>
+    <link rel="stylesheet" href="../static/css/login.css"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.0/css/bootstrap.min.css">
+    <script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <!--    <script src="/webjars/jquery/3.6.0/jquery.slim.min.js"></script>-->
+    <!--    <script src="/webjars/popper.js/2.9.3/umd/popper.min.js"></script>-->
+    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="top">点餐通&nbsp;·&nbsp;用数据改变未来</div>
+<div class="content">
+    <div class="login">
+        <div class="title">点餐通登录</div>
+        <div class="line">
+            <img class="smallImg" src="../static/img/icon1.png">
+            <input placeholder="请输入账号" type="text">
+        </div>
+        <div class="line">
+            <img class="smallImg" src="http://192.168.1.108:8080/static/img/icon2.png">
+            <input placeholder="请输入密码" type="password">
+        </div>
+        <button type="button" id="submit"
+                data-container="body" data-toggle="popover" data-placement="bottom"
+                data-content="底部的 Popover 中的一些内容" class="logBut">登&nbsp;&nbsp;录
+        </button>
+    </div>
+</div>
+
+
+</body>
+<script type="application/javascript">
+
+    $(function () {
+        // $("[data-toggle='popover']").popover();
+
+        $("#submit").click(function () {
+            $.ajax({
+                url: "../dict_type/login",
+                data: {loginName: 'jenny'},
+                type: "POST",
+                dataType: "json",
+                success: function(data) {
+
+                }
+            });
+        })
+    })
+</script>
+</html>
