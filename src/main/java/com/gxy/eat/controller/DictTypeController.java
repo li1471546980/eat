@@ -12,7 +12,7 @@ public class DictTypeController {
 
     @GetMapping("/index")
     public String index() {
-        return "index";
+        return "login";
     }
 
     @PostMapping("/login")
